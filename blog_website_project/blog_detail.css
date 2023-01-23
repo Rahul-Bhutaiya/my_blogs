@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --border:rgba(128, 128, 128, 0.233);
+    --ff:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#github_link{
+    justify-self: start;
+    align-self: end;
+    color: gray;
+    font-family:var(--ff)
+}
+#main_heading{
+    text-decoration: underline;
+    place-self: center;
+}
+#img{
+    place-self: end;
+}
+section{
+    margin: 1em 2em;
+    display: flex;
+    column-gap: 1em;
+}
+section div,p,a,small,ul,ol{
+    margin-bottom: 1em;
+}
+section p,a,small,ul,ol{
+    font-family: "Poppins",serif;
+}
+ul,ol{
+    margin-left: 2.5rem;
+}
+.sec2_3 a{
+    display: block;
+    margin-bottom: 0em;
+}
+.sec2_2 a{
+    display: block;
+    margin-bottom: 0em;
+}
+.main_section1{
+    width: 100%;
+}
+.main_section2{
+    width:20%;
+}
+.main_section2 h2{
+    font-style: italic;
+}
+.sec2_1{
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 0.5em;
+}
+.Post_main_heading{
+    font-size: 3em;
+}
+.Post_main_heading2{
+    font-size: 2em;
+}
+.border{
+    border: 1px solid black;
+}
+.sec2_4 a{
+    padding: 0.1em 0.4em;
+    border: 1px solid rgba(0, 0, 255, 0.582);
+    border-radius: 1.3em;
+    text-decoration: none;
+}
+#link1{
+    color:gray;
+    border: 1px solid gray;
+}
+@media (max-width:650px){
+    section{
+        margin: 1em 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_section2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        grid-template-areas: 
+        "about archives"
+        "none else_where";
+        grid-gap: 1rem;
+    }
+    .sec2_1,.sec2_2,.sec2_3{
+        width: 12rem;
+    }
+    .sec2_1{
+        grid-area: about;
+    }
+    .sec2_2{
+        grid-area: archives;
+    }
+    .sec2_3{
+        grid-area: else_where;
+    }
+    #github_link{
+        font-size: 0.5rem;
+    }
+    #main_heading{
+        font-size: 1.4rem;
+    }
+    #img{
+        transform: scale(0.5);
+    }
+    .wrapper{
+        overflow-x: hidden;
+    }
+}
+
+@media(max-width:400px){
+    .main_section2{
+        display: grid;
+        grid-template-columns: 1,1fr;
+        width: 100%;
+        grid-template-areas: 
+        "about"
+        "archives"
+        "else_where";
+        grid-gap: 1rem;
+    }   
+    #github_link{
+        font-size: 0.5rem;
+    }
+    #main_heading{
+        font-size: 1.0rem;
+    }
+    #img{
+        transform: scale(0.3);
+    }
+}

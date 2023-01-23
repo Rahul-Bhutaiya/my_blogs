@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --border:rgba(128, 128, 128, 0.233);
+    --ff:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.wrapper{
+    margin: 2rem 1rem;
+}
+#github_link{
+    justify-self: start;
+    align-self: end;
+    color: gray;
+    font-family:var(--ff)
+}
+#main_heading{
+    text-decoration: underline;
+    place-self: center;
+}
+#img{
+    place-self: end;
+}
+.blog{
+    overflow-x: hidden;
+    border: 0.3em solid var(--border);
+    padding: 1rem;
+}
+.blog:hover{
+    border: 0.1em solid var(--border);
+    border-radius: 0.3em;
+    transition: 0.2s;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,20rem);
+    grid-auto-rows: minmax(15em,auto);
+    grid-gap: 1.4rem 0.8rem;
+
+    grid-template-areas: 
+    "word1 design1"
+    "word2 design2"
+    "word3 design3";
+}
+.rel-blog{
+    margin: 0.6em 0;
+    font-family:var(--ff);
+    font-weight: 600;
+}
+.date{
+    font-family:var(--ff);
+    color: gray;
+}
+.desc{
+    font-family:var(--ff)
+}
+.blog a{
+    color: rgb(2, 153, 253);
+}
+#wor{
+    color: rgb(2, 153, 253);
+}
+#desi{
+    color: green;
+}
+#de{
+    position: relative;
+    bottom: -3.3em;
+}
+#de2{
+    position: relative;
+    bottom: -2em;
+}
+#blog1{
+    grid-area: word1;
+}
+#blog2{
+    grid-area: word2;
+}
+#blog3{
+    grid-area: word3;
+}
+#blog4{
+    grid-area: design1;
+}
+#blog5{
+    grid-area: design2;
+}
+#blog6{
+    grid-area: design3;
+}
+@media (max-width:499px){
+    .main{
+        grid-template-columns:1fr;
+
+        grid-template-areas: 
+        "word1"
+        "word2"
+        "word3"
+        "design1"
+        "design2"
+        "design3";
+    }
+    #github_link{
+        font-size: 0.5rem;
+        align-self: center;
+    }
+    #main_heading{
+        font-size: 1.4rem;
+    }
+    #img{
+        align-self: center;
+        transform: scale(0.5);
+    }
+}
+
+@media (min-width:500px){
+    .wrapper{
+        margin: 1rem 1rem;
+    }
+    #main_heading{
+        font-size: 1.5em;
+    }
+    #github_link{
+        align-self:center;
+        font-size: 0.5em;
+    }
+    #img{
+        align-self:center;
+        transform: scale(0.3);
+    }
+    .main{
+        grid-template-columns: repeat(2,15rem);
+        grid-auto-rows: minmax(15em,auto);
+        grid-gap: 2rem 1rem;
+    }
+    .blog{
+        border: 0.3em solid var(--border);
+    }
+    .blog:hover{
+        border: 0.1em solid var(--border);
+        border-radius: 0.4em;
+    }
+    .rel-blog{
+        font-size: 0.6rem;
+    }
+    .blog-title{
+        font-size: 1.5rem;
+    }
+    .date{
+        font-size: 0.8rem;
+    }
+    .desc{
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .blog a{
+        font-size: 0.8rem;
+    }
+    #de{
+        position: relative;
+        bottom: -5em;
+    }
+}
+@media (min-width:1100px){
+    .wrapper{
+        margin: 1rem 1rem;
+    }
+    #main_heading{
+        font-size: 3em;
+    }
+    #github_link{
+        align-self:center;
+        font-size: 1em;
+    }
+    #img{
+        align-self:center;
+        transform: scale(0.7);
+    }
+    .main{
+        grid-template-columns: repeat(2,25rem);
+        grid-auto-rows: minmax(15em,auto);
+        grid-gap: 2rem 1rem;
+    }
+    .blog{
+        border: 0.4em solid var(--border);
+    }
+    .blog:hover{
+        border: 0.1em solid var(--border);
+        border-radius: 0.4em;
+    }
+    .rel-blog{
+        font-size: 1rem;
+    }
+    .blog-title{
+        font-size: 2rem;
+    }
+    .date{
+        font-size: 0.9rem;
+    }
+    .desc{
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .blog a{
+        font-size: 1rem;
+    }
+    
+    #de{
+        position: relative;
+        bottom: -3.3em;
+    }
+}
+
+@media (min-width:1700px){
+    .wrapper{
+        margin: 2rem 2rem;
+    }
+    #main_heading{
+        font-size: 5em;
+    }
+    #github_link{
+        align-self:center;
+        font-size: 2em;
+    }
+    #img{
+        align-self:center;
+        transform: scale(1.5);
+    }
+    .main{
+        grid-template-columns: repeat(2,45rem);
+        grid-auto-rows: minmax(28em,auto);
+        grid-gap: 4rem 2rem;
+    }
+    .blog{
+        border: 0.6em solid var(--border);
+    }
+    .blog:hover{
+        border: 0.2em solid var(--border);
+        border-radius: 0.8em;
+    }
+    .rel-blog{
+        font-size: 2rem;
+    }
+    .blog-title{
+        font-size: 4rem;
+    }
+    .date{
+        font-size: 1.8rem;
+    }
+    .desc{
+        margin-top: 1rem;
+        font-size: 1.8rem;
+    }
+    .blog a{
+        font-size: 2rem;
+    }
+}
